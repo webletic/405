@@ -1,0 +1,24 @@
+{
+  "people": [
+    {
+      "name":"John",
+      "age": 35,
+      "email": "John@example.com"
+    },
+    {
+      "name":"Harry",
+      "age":40,
+      "email": "Harry@example.com"
+    },
+    {
+      "name":"Pamela",
+      "age":25,
+      "email": "Pamela@example.com"
+    },
+    {
+      "name":"Eric",
+      "age":20,
+      "email": "Eric@example.com"
+    }
+  ]
+}
