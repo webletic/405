@@ -1,0 +1,98 @@
+<html>
+<head>
+  <title>CSE 405 Server Programming</title>
+</head>
+<body>
+  <!--Login form-->
+  <div id="login_div" class="main-div">
+    <h3>Login</h3>
+    <input type="email" placeholder="Email..." id="email_field" />
+    <input type="password" placeholder="Password..." id="password_field" />
+
+    <button onclick="login()">Login to Account</button>
+  </div>
+
+  <!--Signup form-->
+  <div id="signup_div" class="signup-div">
+    <h3>Signup</h3>
+    <input type="email" placeholder="Email..." id="signup_email" />
+    <input type="password" placeholder="Password..." id="signup_pass" />
+
+    <button onclick="signup()">Signup</button>
+  </div>
+
+  <div id="user_div" class="loggedin-div">
+    <h3>Welcome User</h3><p id="user_para">Logging in.</p>
+    
+    <button onclick="logout()">Logout</button>
+  </div>
+
+  <!--Contact form (shows if logged in)-->
+  <div id="contact_div" class="contact-div">
+
+    <div class="container">
+      <h1 class="brand"><span>405</span> Server Programming</h1>
+      <div class="wrapper">
+        <div class="company-info">
+          <h3>You can contact us at:</h3>
+          <ul>
+            <li><i class="fa fa-road"></i> 13 Example st</li>
+            <li><i class="fa fa-phone"></i> 555-555</li>
+            <li><i class="fa fa-envelope"></i> example@example.com</li>
+          </ul>
+        </div>
+        <div class="contact">
+          <h3>Email Us</h3>
+          <div class="alert" style="display:none">Your message has been sent</div>
+          <form id="contactForm">
+            <p>
+              <label>Name</label>
+              <input type="text" name="name" id="name" required>
+            </p>
+            <p>
+              <label>Company</label>
+              <input type="text" name="company" id="company">
+            </p>
+            <p>
+              <label>Email Address</label>
+              <input type="email" name="email" id="email" required>
+            </p>
+            <p>
+              <label>Phone Number</label>
+              <input type="text" name="phone" id="phone">
+            </p>
+            <p class="full">
+              <label>Message</label>
+              <textarea name="message" rows="5" id="message"></textarea>
+            </p>
+            <p class="full">
+              <button type="submit">Submit</button>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+    <a href="checkmsg.html">Check messages</a>
+  </div>
+
+
+<!--Firebase stuff-->
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+    apiKey: "AIzaSyADz4MNQw6vAl3qW_CQo19BymttAOJpSO8",
+    authDomain: "wow-c3aee.firebaseapp.com",
+    databaseURL: "https://wow-c3aee.firebaseio.com",
+    projectId: "wow-c3aee",
+    storageBucket: "wow-c3aee.appspot.com",
+    messagingSenderId: "713056288205",
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="index.js"></script>
+  <script src="contact.js"></script>
+  <script src="msgs.js"></script>
+
+</body>
+</html>
